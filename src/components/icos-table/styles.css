@@ -1,0 +1,73 @@
+.icos-table-container {
+  width: 100%;
+  margin: auto;
+}
+
+.icos-table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.icos-table tr td {
+  font-size: 12px;
+}
+
+.icos-table tr th {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.icos-table tr:nth-child(even), .icos-table tr:nth-child(odd) {
+  color: #7a7c6e;
+  height: 50px;
+}
+
+.icos-table tr:nth-child(even) {
+  background-color: #1e1e1e;
+}
+
+.icos-table tr:nth-child(odd) {
+  background-color: #252526;
+}
+
+.icos-table tr td img.ico-icon {
+  border-radius: 50%;
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.icos-table tr.full-description-row td {
+  padding: 10px;
+  text-align: left;
+}
+
+.original-website-link {
+  color: deepskyblue;
+}
+
+.full-description-btn {
+  border: 3px solid #4e5b71;
+  border-radius: 50%;
+  background: none;
+  background-color: #d3c9f1;
+  outline: none;
+  padding: 0px;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color, border-color, transform .50s ease-out;
+}
+
+.full-description-btn.is-active {
+  border-color:  #353f71;
+  background-color: white;
+  transform: rotate(180deg);
+}
+
+.full-description-btn img {
+  width: 100%;
+  height: 100%;
+}
