@@ -36,6 +36,7 @@ class IcosTable extends React.Component {
     this.setState({
       isSpinning: true,
       currentCategory: category,
+      openedFullDescriptions: [],
     })
 
     this.props.manageIcoCategoryFetch(category)
