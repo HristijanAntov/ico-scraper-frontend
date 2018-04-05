@@ -62,7 +62,7 @@ class IcosTable extends React.Component {
     })
   }
 
-  bindFullDescriptionRow(record, index) {
+  bindFullDescriptionRow(record) {
     const { openedFullDescriptions } = this.state
     const rendered = (
       openedFullDescriptions.find(id => id === record.id) &&
@@ -70,7 +70,7 @@ class IcosTable extends React.Component {
     )
       ? <Row
         rowType="DescriptionRow"
-        key={index}
+        key={`${record.id}-full-desc`}
         fullDescription={record.fullDescription}
       />
       : null
@@ -97,8 +97,8 @@ class IcosTable extends React.Component {
                 <Row rowType="HeaderRow" />
                 {appendFullDescriptionRecordToIcos(icos)
                   .filter(record => record.category === currentCategory || record.isFullDescription)
-                  .map((record, i) => record.isFullDescription
-                    ? this.bindFullDescriptionRow(record, i)
+                  .map(record => record.isFullDescription
+                    ? this.bindFullDescriptionRow(record)
                     :
                     <Row
                       key={record.id}
